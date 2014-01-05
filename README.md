@@ -33,3 +33,12 @@ The script was developed to be used in a newly created VMware based virtual masc
 
 * You need a SCSI based harddrive `/dev/sda` with at least a size of 20 GB (note that the script only allocates approx. 19 GB no matter how the size of your drive is)
 * You need **one** network card, if it is not an Intel's E1000 or VMXnet you have to provide a specific kernel config file
+
+## Installation
+
+* Download the Gentoo Live CD image from [http://www.gentoo.org/main/en/where.xml]
+* Boot with `gentoo doscsi dolvm`
+* Download the script with `wget https://raw.github.com/myschaller/gentoo-install/master/gentoo-install.sh /tmp/gentoo-install.sh`
+* Set the execution flag for the script `chmod 755 /tmp/gentoo-install.sh`
+* Adjust the settings to your needs in the configuration section `nano -w /tmp/gentoo-install.sh`
+* Run the script `/tmp/gentoo-install.sh`
