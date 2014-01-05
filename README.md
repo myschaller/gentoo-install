@@ -42,4 +42,4 @@ The script was developed to be used in a newly created VMware based virtual masc
 * Set the execution flag for the script `chmod 755 /tmp/gentoo-install.sh`
 * Adjust the settings to your needs in the configuration section `nano -w /tmp/gentoo-install.sh`
 * Run the script `/tmp/gentoo-install.sh`
-* Based on the specs of the maschine wait several hours ;-) The script automatically boots into the new system. The password set for root is "Hello."
+* Based on the specs of the maschine wait several hours ;-) The script automatically boots into the new system. The password set for root is "*Hello.*"
