@@ -49,13 +49,13 @@ MIRROR=http://mirror.switch.ch/
 MIRROR_BASE_PATH=ftp/mirror/gentoo/
 
 # Stage 3 relative path
-STAGE_PATH=releases/amd64/current-stage3/hardened/
+STAGE_PATH=releases/amd64/current-iso/hardened/
 
 # Portage snapshot relative path
 PORTAGE_PATH=snapshots/
 
 # Stage3 tarball
-STAGE_BALL=stage3-amd64-hardened-20131226.tar.bz2
+STAGE_BALL=stage3-amd64-hardened-20140403.tar.bz2
 
 # Portage snapshot tarball
 PORTAGE_SNAPSHOT=portage-latest.tar.bz2
@@ -80,7 +80,7 @@ KERNEL_SOURCES="sys-kernel/hardened-sources"
 
 # Default kernel config. The default provided by this script is optimized for 
 # a VMware virtulation environment
-KERNEL_CONFIG_PATH="https://raw.github.com/myschaller/gentoo-install/master/kernel-configs/config-linux-3.11-hardened-default"
+KERNEL_CONFIG_PATH="https://raw.github.com/myschaller/gentoo-install/master/kernel-configs/config-linux-3.13.6-hardened-r3-default"
 
 # FSTAB configuration: /etc/fstab
 read -r -d '' FSTAB <<'EOF'
@@ -126,8 +126,11 @@ ETC_CONFD_NET_FILE_CONTENT="${ETC_CONFD_NET_FILE_CONTENT//NET_GATEWAY_IP/$NET_GA
 
 # Additional /etc/hosts entries
 read -r -d '' ETC_HOSTS_CONTENT <<'EOF'
-192.168.1.10      hostname.domain.com hostname
+NET_HOST_IP      NET_HOST_NAME.NET_HOST_DOMAIN NET_HOST_NAME
 EOF
+ETC_HOSTS_CONTENT="${ETC_HOSTS_CONTENT//NET_HOST_DOMAIN/$NET_HOST_DOMAIN}"
+ETC_HOSTS_CONTENT="${ETC_HOSTS_CONTENT//NET_HOST_IP/$NET_HOST_IP}"
+ETC_HOSTS_CONTENT="${ETC_HOSTS_CONTENT//NET_HOST_NAME/$ETC_CONFD_HOSTNAME}"
 
 # Keyborad settings /etc/conf.d/keymaps
 read -r -d '' ETC_CONFD_KEYMAPS_CONTENT <<'EOF'
