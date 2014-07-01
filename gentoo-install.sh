@@ -80,7 +80,7 @@ KERNEL_SOURCES="sys-kernel/hardened-sources"
 
 # Default kernel config. The default provided by this script is optimized for 
 # a VMware virtulation environment
-KERNEL_CONFIG_PATH="https://raw.github.com/myschaller/gentoo-install/master/kernel-configs/config-linux-3.13.6-hardened-r3-default"
+KERNEL_CONFIG_PATH="https://raw.github.com/myschaller/gentoo-install/master/kernel-configs/config-linux-3.14.5-r2-hardened-default"
 
 # FSTAB configuration: /etc/fstab
 read -r -d '' FSTAB <<'EOF'
