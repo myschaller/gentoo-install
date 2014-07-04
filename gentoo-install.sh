@@ -404,7 +404,7 @@ script_env_update
 logger "Gentoo install: Installing kernel-sources"
 emerge -q $KERNEL_SOURCES
 cd /usr/src/linux
-wget -O .config https://raw.github.com/myschaller/gentoo-install/master/kernel-configs/config-linux-3.11-hardened-default
+wget -O .config $KERNEL_CONFIG_PATH
 make && make modules_install
 script_copy_kernel
 
