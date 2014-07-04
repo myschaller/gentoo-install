@@ -55,7 +55,7 @@ STAGE_PATH=releases/amd64/current-iso/hardened/
 PORTAGE_PATH=snapshots/
 
 # Stage3 tarball
-STAGE_BALL=stage3-amd64-hardened-20140403.tar.bz2
+STAGE_BALL=stage3-amd64-hardened-20140619.tar.bz2
 
 # Portage snapshot tarball
 PORTAGE_SNAPSHOT=portage-latest.tar.bz2
